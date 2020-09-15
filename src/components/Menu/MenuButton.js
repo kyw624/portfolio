@@ -19,7 +19,8 @@ const StyledButton = styled.button`
 
   &:hover {
     transform: scale(1.2);
-    background: black;
+    background: ${(props) => props.color};
+    border-color: white;
     color: white;
   }
 

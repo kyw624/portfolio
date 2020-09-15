@@ -9,7 +9,7 @@ const MenuContainer = styled.div`
   left: calc(50% - 35rem);
   width: 70rem;
   height: 15rem;
-  background: rgba(0, 0, 0, 0.075);
+  background: lightgray;
   display: flex;
   align-items: center;
   justify-content: space-around;
