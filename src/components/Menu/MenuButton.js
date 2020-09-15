@@ -34,7 +34,6 @@ function MenuButton(props) {
     <>
       <StyledButton
         onMouseOver={() => {
-          console.log(props);
           props.showPage(props.index);
           props.changeColor(props.color);
         }}

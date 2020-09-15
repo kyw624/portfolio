@@ -64,4 +64,4 @@ function Menu(props) {
   return <MenuContainer>{displayButton(menuItems)}</MenuContainer>;
 }
 
-export default Menu;
+export default React.memo(Menu);

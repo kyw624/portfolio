@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import StatusBar from './components/StatusBar/StatusBar';
 import Main from './components/Main';
@@ -29,15 +29,35 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   const [page, setPage] = useState(0);
   const [color, setColor] = useState('black');
+  const [date, setDate] = useState(new Date().getDay());
   const [time, setTime] = useState('');
 
-  const showPage = (num) => setPage(num);
-  const changeColor = (color) => setColor(color);
+  const showPage = useCallback((num) => setPage(num), []);
+  const changeColor = useCallback((color) => setColor(color), []);
+  const getTime = useCallback((time) => {
+    const today = new Date();
+    const toggle = today.getHours() > 12 ? '오후' : '오전';
+    const hour =
+      today.getHours() > 12 ? today.getHours() - 12 : today.getHours();
+    const minute = today.getMinutes();
+    const second = today.getSeconds();
+
+    const currentTime = `${toggle} ${hour < 10 ? `0${hour}` : hour}:${
+      minute < 10 ? `0${minute}` : minute
+    }:${second < 10 ? `0${second}` : second}`;
+
+    setTime(currentTime);
+
+    if (`${hour}:${minute}:${second}` === '0:0:0') {
+      const updateDate = new Date().getDay();
+      if (date !== updateDate) setDate(updateDate);
+    }
+  }, []);
 
   return (
     <>
       <GlobalStyle />
-      <StatusBar />
+      <StatusBar date={date} time={time} getTime={getTime} />
       <Main page={page} color={color} />
       <Menu showPage={showPage} changeColor={changeColor} />
     </>

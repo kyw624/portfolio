@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import StatusBarClock from './StatusBarClock';
 
 const StatusBarContainer = styled.div`
   position: fixed;
@@ -13,6 +14,7 @@ const StatusBarContainer = styled.div`
   align-items: center;
   background: linear-gradient(#e5edfa, silver);
   font-size: 1.8rem;
+  font-weight: 700;
   box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.5);
   transition: background 0.3s, color 0.3s, box-shadow 0.3s, font-size 0.3s;
   animation: headerShadow 1s infinite alternate;
@@ -32,8 +34,74 @@ const StatusBarContainer = styled.div`
   }
 `;
 
-function StatusBar() {
-  return <StatusBarContainer>상태바</StatusBarContainer>;
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  span {
+    margin: 0;
+    padding: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    /* background: url(); */
+    /* backgorund-size: cover; */
+    transition: transform 5s;
+    animation: scaleLogo 0.7s both infinite alternate;
+
+    &:hover {
+      animation: rotateLogo 1s both infinite;
+    }
+
+    @keyframes scaleLogo {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes rotateLogo {
+      0% {
+        transform: none;
+      }
+      100% {
+        transform: rotate(1turn);
+      }
+    }
+  }
+`;
+
+const CopyrightContainer = styled.div`
+  font-size: 1.4rem;
+`;
+
+function StatusBar(props) {
+  return (
+    <>
+      <StatusBarContainer>
+        <LogoContainer>
+          <span role="img" aria-label="logo">
+            😄
+          </span>
+          <div>DaengKIM</div>
+        </LogoContainer>
+        <CopyrightContainer>
+          Copyright 2020. Youngwoo Kim. All rights reserved.
+        </CopyrightContainer>
+        <StatusBarClock
+          date={props.date}
+          time={props.time}
+          getTime={props.getTime}
+        />
+      </StatusBarContainer>
+    </>
+  );
 }
 
-export default StatusBar;
+export default React.memo(StatusBar);
