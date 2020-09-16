@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import StatusBar from './components/StatusBar/StatusBar';
 import Main from './components/Main';
 import Menu from './components/Menu/Menu';
+import bgImage from './images/background.jpg';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -21,8 +22,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #e8e8e8;
-    /* background-image: url() */
+    background: url(${bgImage}) no-repeat;
+    background-size: cover;
   }
 `;
 
