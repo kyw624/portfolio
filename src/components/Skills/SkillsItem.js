@@ -51,7 +51,6 @@ const TextBox = styled.div`
 `;
 
 const SkillsItem = (props) => {
-  console.log(props.item);
   const imageData = {
     javascript: require('../../images/logo/javascript.png'),
     typescript: require('../../images/logo/typescript.png'),
