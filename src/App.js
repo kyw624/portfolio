@@ -34,7 +34,7 @@ function App() {
 
   const showPage = useCallback((num) => setPage(num), []);
   const changeColor = useCallback((color) => setColor(color), []);
-  const getTime = useCallback((time) => {
+  const getTime = useCallback((time, date) => {
     const today = new Date();
     const toggle = today.getHours() > 12 ? '오후' : '오전';
     const hour =
