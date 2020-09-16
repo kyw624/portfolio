@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import StatusBarClock from './StatusBarClock';
+import logoImage from '../../images/status-bar.jpg';
 
 const StatusBarContainer = styled.div`
   position: fixed;
@@ -48,8 +49,8 @@ const LogoContainer = styled.div`
     border: 0.1rem solid black;
     border-radius: 0.5rem;
     cursor: pointer;
-    /* background: url(); */
-    /* backgorund-size: cover; */
+    background: url(${logoImage}) center no-repeat;
+    background-size: cover;
     transition: transform 5s;
     animation: scaleLogo 0.7s both infinite alternate;
 
@@ -62,7 +63,7 @@ const LogoContainer = styled.div`
         transform: scale(1);
       }
       100% {
-        transform: scale(1.2);
+        transform: scale(1.5);
       }
     }
 
@@ -86,9 +87,7 @@ function StatusBar(props) {
     <>
       <StatusBarContainer>
         <LogoContainer>
-          <span role="img" aria-label="logo">
-            😄
-          </span>
+          <span role="img" aria-label="logo"></span>
           <div>DaengKIM</div>
         </LogoContainer>
         <CopyrightContainer>

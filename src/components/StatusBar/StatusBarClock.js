@@ -7,6 +7,10 @@ const ClockContainer = styled.div`
   justify-content: space-around;
 `;
 
+const StyledDate = styled.div`
+  font-size: 1.6rem;
+`;
+
 const StyledClock = styled.div`
   margin-left: 0.5rem;
 `;
@@ -17,7 +21,7 @@ function StatusBarClock(props) {
 
   return (
     <ClockContainer>
-      <div>({DAY[props.date]})</div>
+      <StyledDate>({DAY[props.date]})</StyledDate>
       <StyledClock>{props.time}</StyledClock>
     </ClockContainer>
   );
