@@ -66,7 +66,7 @@ function Contact(props) {
   const renderContact = (arr) => {
     return arr.map((item, index) => {
       return (
-        <ContactWrap>
+        <ContactWrap key={index}>
           <ContactCaption color={props.color}>{item.caption}</ContactCaption>
           <ContactContent>{item.content}</ContactContent>
         </ContactWrap>
