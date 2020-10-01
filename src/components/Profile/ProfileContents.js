@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 const ContentBox = styled.div`
   width: 100%;
-  height: 30px;
+  height: 3rem;
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  margin: 1rem 0;
 `;
 
 const StyledTitle = styled.div`
