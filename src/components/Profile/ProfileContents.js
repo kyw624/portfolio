@@ -20,6 +20,7 @@ const StyledContent = styled.div`
   position: absolute;
   font-size: 1.7rem;
   margin-left: 11rem;
+  margin-bottom: 0.6rem;
 `;
 
 function ProfileContents(props) {
