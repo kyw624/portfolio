@@ -40,35 +40,49 @@ const ContactCaption = styled.div`
   border-bottom: 1px solid ${(props) => props.color};
 `;
 
-const ContactContent = styled.div`
+const ContactContent = styled.a`
   position: absolute;
   font-size: 1.8rem;
   left: 10rem;
   width: fit-content;
+  cursor: pointer;
+
+  &:active {
+    color: ${(props) => props.color};
+  }
 `;
 
 function Contact(props) {
   const ContactItems = [
     {
-      caption: 'Email',
+      caption: 'Email.',
       content: 'sesabc1005@naver.com',
     },
     {
-      caption: 'Phone',
+      caption: 'Phone.',
       content: '010-2338-6240',
     },
     {
-      caption: 'GitHub',
+      caption: 'GitHub.',
       content: 'https://github.com/kyw624',
     },
   ];
+
+  const copyToClipboard = (e) => {
+    const value = e.currentTarget.textContent;
+
+    navigator.clipboard.writeText(value);
+    alert('Copied !!');
+  };
 
   const renderContact = (arr) => {
     return arr.map((item, index) => {
       return (
         <ContactWrap key={index}>
           <ContactCaption color={props.color}>{item.caption}</ContactCaption>
-          <ContactContent>{item.content}</ContactContent>
+          <ContactContent color={props.color} onClick={copyToClipboard}>
+            {item.content}
+          </ContactContent>
         </ContactWrap>
       );
     });
