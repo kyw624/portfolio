@@ -1,5 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const tagScale = keyframes`
+  from {
+    transform: none;
+  }
+  to {
+    transform: scale(1.15);
+  }
+`;
 
 const FooterWrap = styled.div`
   position: absolute;
@@ -26,17 +35,25 @@ const ProfileTag = styled.div`
   font-weight: 700;
   text-align: center;
   line-height: 8rem;
+  cursor: pointer;
+  animation: ${tagScale} 0.9s alternate infinite;
+  animation-delay: ${(props) => props.delay}s;
 `;
 
 const ProfileFooter = ({ color }) => {
-  return (
-    <FooterWrap color={color}>
-      <ProfileTag color={color}>성실</ProfileTag>
-      <ProfileTag color={color}>끈기</ProfileTag>
-      <ProfileTag color={color}>긍정</ProfileTag>
-      <ProfileTag color={color}>협력</ProfileTag>
-    </FooterWrap>
-  );
+  const tagItems = ['성실', '끈기', '긍정', '협력'];
+  const renderProfileTags = (arr) => {
+    let delay = -0.85;
+    return arr.map((item, index) => {
+      delay += 0.15;
+      return (
+        <ProfileTag key={index} color={color} delay={delay}>
+          {item}
+        </ProfileTag>
+      );
+    });
+  };
+  return <FooterWrap color={color}>{renderProfileTags(tagItems)}</FooterWrap>;
 };
 
-export default ProfileFooter;
+export default React.memo(ProfileFooter);
