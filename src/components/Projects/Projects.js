@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import styled, { keyframes } from 'styled-components';
 import ProjectContents from './ProjectContents';
+import BoxFade from '../BoxFade';
 
 const boxScale = keyframes`
   from {
@@ -39,11 +40,8 @@ const PageContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   cursor: pointer;
-  animation: ${boxScale} 1s alternate infinite;
-
-  &:hover {
-    animation: none;
-  }
+  opacity: 0;
+  animation: ${boxScale} 1s alternate infinite, ${BoxFade} 1s 1s forwards;
 `;
 
 const PageButton = styled.div`

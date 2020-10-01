@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Icon } from 'semantic-ui-react';
 import SkillsItem from './SkillsItem';
+import BoxFade from '../BoxFade';
 
 const SkillsContainer = styled.div`
   margin: 0;
@@ -23,6 +24,8 @@ const SkillsWrap = styled.div`
   justify-content: center;
   align-items: center;
   margin: 1.5rem 0;
+  opacity: 0;
+  animation: ${BoxFade} 1s ${(props) => props.delay}s forwards;
 `;
 
 const SkillsTitle = styled.div`
@@ -101,9 +104,11 @@ function Skills(props) {
   ];
 
   const renderSkillItem = (arr) => {
+    let delay = -0.2;
     return arr.map((item, index) => {
+      delay += 0.25;
       return (
-        <SkillsWrap key={index}>
+        <SkillsWrap key={index} delay={delay}>
           <SkillsTitle color={props.color}>{item.caption}</SkillsTitle>
           <SkillsContent>
             <SkillsItem item={item} />

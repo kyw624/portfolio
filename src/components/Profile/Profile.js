@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ProfileContents from './ProfileContents';
 import ProfileFooter from './ProfileFooter';
 import selfImage from '../../images/profile.jpg';
+import BoxFade from '../BoxFade';
 
 const ProfileContainer = styled.div`
   position: relative;
@@ -22,6 +23,7 @@ const ImageTemplate = styled.div`
   border-radius: 50%;
   background: url(${selfImage}) center no-repeat;
   background-size: cover;
+  animation: ${BoxFade} 1s forwards;
 `;
 
 const ContentTemplate = styled.div`
@@ -30,6 +32,8 @@ const ContentTemplate = styled.div`
   width: 70rem;
   height: 100%;
   padding: 2rem;
+  opacity: 0;
+  animation: ${BoxFade} 1s 0.5s forwards;
 `;
 
 const ContentTitle = styled.div`

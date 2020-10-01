@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import BoxFade from '../BoxFade';
 
 const ContactContainer = styled.div`
   width: 100%;
@@ -16,6 +17,8 @@ const ContactTitle = styled.div`
   padding-bottom: 0.6rem;
   margin-bottom: 10rem;
   border-bottom: 1px solid ${(props) => props.color};
+  opacity: 0;
+  animation: ${BoxFade} 1s forwards;
 `;
 
 const ContentBox = styled.div`
@@ -32,6 +35,8 @@ const ContactWrap = styled.div`
   position: relative;
   display: flex;
   margin-bottom: 2rem;
+  opacity: 0;
+  animation: ${BoxFade} 1s ${(props) => props.delay}s forwards;
 `;
 
 const ContactCaption = styled.div`
@@ -76,9 +81,11 @@ function Contact(props) {
   };
 
   const renderContact = (arr) => {
+    let delay = 0;
     return arr.map((item, index) => {
+      delay += 0.25;
       return (
-        <ContactWrap key={index}>
+        <ContactWrap key={index} delay={delay}>
           <ContactCaption color={props.color}>{item.caption}</ContactCaption>
           <ContactContent color={props.color} onClick={copyToClipboard}>
             {item.content}

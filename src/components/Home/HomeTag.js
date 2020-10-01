@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import BoxFade from '../BoxFade';
 
 const StyledTag = styled.div`
   border: 0.2rem solid #f2f2f2;
@@ -15,6 +16,8 @@ const StyledTag = styled.div`
   color: #007ec7;
   cursor: pointer;
   transition: transform 0.25s, background 0.25s;
+  opacity: 0;
+  animation: ${BoxFade} 1s ${(props) => props.delay}s forwards;
 
   &:hover {
     background: white;
@@ -24,7 +27,7 @@ const StyledTag = styled.div`
 `;
 
 function HomeTag(props) {
-  return <StyledTag># {props.text}</StyledTag>;
+  return <StyledTag delay={props.delay}># {props.text}</StyledTag>;
 }
 
 export default HomeTag;

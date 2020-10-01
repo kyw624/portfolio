@@ -1,14 +1,6 @@
 import React, { useRef } from 'react';
-import styled, { keyframes } from 'styled-components';
-
-const boxFade = keyframes`
-    from {
-      opacity: 0;
-    }
-    to {  
-      opacity: 1;
-    }
-`;
+import styled from 'styled-components';
+import BoxFade from '../BoxFade';
 
 const ProjectDescription = styled.div`
   position: relative;
@@ -19,7 +11,7 @@ const ProjectDescription = styled.div`
   flex-direction: column;
   border: 0.3rem solid ${(props) => props.color};
   background: rgba(245, 253, 255, 0.85);
-  animation: ${boxFade} 1s forwards;
+  animation: ${BoxFade} 1s forwards;
 `;
 
 const ProjectTitle = styled.div`
@@ -78,7 +70,7 @@ const ProjectImage = styled.img`
   width: 49%;
   height: 100%;
   border: 0.3rem solid ${(props) => props.color};
-  animation: ${boxFade} 1s 1s forwards;
+  animation: ${BoxFade} 1s 0.5s forwards;
 `;
 
 function ProjectContents(props) {
