@@ -1,14 +1,6 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-
-const tagScale = keyframes`
-  from {
-    transform: none;
-  }
-  to {
-    transform: scale(1.15);
-  }
-`;
+import styled from 'styled-components';
+import BoxFade from '../BoxFade';
 
 const FooterWrap = styled.div`
   position: absolute;
@@ -36,16 +28,21 @@ const ProfileTag = styled.div`
   text-align: center;
   line-height: 8rem;
   cursor: pointer;
-  animation: ${tagScale} 0.9s alternate infinite;
-  animation-delay: ${(props) => props.delay}s;
+  opacity: 0;
+  animation: ${BoxFade} 1s ${(props) => props.delay}s forwards;
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const ProfileFooter = ({ color }) => {
   const tagItems = ['성실', '끈기', '긍정', '협력'];
   const renderProfileTags = (arr) => {
-    let delay = -0.85;
+    let delay = 1;
     return arr.map((item, index) => {
-      delay += 0.15;
+      delay += 0.25;
       return (
         <ProfileTag key={index} color={color} delay={delay}>
           {item}
