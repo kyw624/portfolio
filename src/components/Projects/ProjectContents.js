@@ -30,7 +30,6 @@ const ProjectTitle = styled.div`
 
 const ProjectContent = styled.div`
   margin-top: 3rem;
-  font-weight: 600;
 
   p {
     margin-bottom: 4rem;
