@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Icon } from 'semantic-ui-react';
+// import { Icon } from 'semantic-ui-react';
 import SkillsItem from './SkillsItem';
 import BoxFade from '../BoxFade';
 
@@ -42,32 +42,32 @@ const SkillsContent = styled.div`
   height: 14rem;
 `;
 
-const ArrowButton = styled.div`
-  margin: 0;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  display: flex;
-  align-items: center;
-  transition: all 1s ease-in-out;
-  animation: none;
+// const ArrowButton = styled.div`
+//   margin: 0;
+//   height: 100%;
+//   position: absolute;
+//   left: 0;
+//   display: flex;
+//   align-items: center;
+//   transition: all 1s ease-in-out;
+//   animation: none;
 
-  &:first-child {
-    cursor: pointer;
-    color: ${(props) => props.color};
-    font-size: 5.2rem;
-  }
+//   &:first-child {
+//     cursor: pointer;
+//     color: ${(props) => props.color};
+//     font-size: 5.2rem;
+//   }
 
-  .clicked {
-    animation: opacityArrow 0.5s forwards;
+//   .clicked {
+//     animation: opacityArrow 0.5s forwards;
 
-    @keyframes opacityArrow {
-      50% {
-        opacity: 0;
-      }
-    }
-  }
-`;
+//     @keyframes opacityArrow {
+//       50% {
+//         opacity: 0;
+//       }
+//     }
+//   }
+// `;
 
 function Skills(props) {
   const SkillItems = [
@@ -118,32 +118,32 @@ function Skills(props) {
     });
   };
 
-  const clickArrow = (e) => {
-    e.preventDefault();
+  // const clickArrow = (e) => {
+  //   e.preventDefault();
 
-    const target = e.target;
+  //   const target = e.target;
 
-    target.classList.remove('clicked');
+  //   target.classList.remove('clicked');
 
-    if (target.classList.contains('right')) {
-      target.classList.add('left');
-      target.classList.remove('right');
-    } else {
-      target.classList.add('right');
-      target.classList.remove('left');
-    }
+  //   if (target.classList.contains('right')) {
+  //     target.classList.add('left');
+  //     target.classList.remove('right');
+  //   } else {
+  //     target.classList.add('right');
+  //     target.classList.remove('left');
+  //   }
 
-    void target.offsetWidth; // 애니메이션 한 번만 실행되는 현상 방지
+  //   void target.offsetWidth; // 애니메이션 한 번만 실행되는 현상 방지
 
-    target.classList.add('clicked');
-    // 아이콘 변경시 트랜지션 줄 예정
-  };
+  //   target.classList.add('clicked');
+  //   // 아이콘 변경시 트랜지션 줄 예정
+  // };
 
   return (
     <SkillsContainer>
-      <ArrowButton color={props.color}>
+      {/* <ArrowButton color={props.color}>
         <Icon name="angle double right" onClick={clickArrow} />
-      </ArrowButton>
+      </ArrowButton> */}
       {renderSkillItem(SkillItems)}
     </SkillsContainer>
   );
