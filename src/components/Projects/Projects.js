@@ -89,18 +89,18 @@ function Projects(props) {
       skill: 'HTML, CSS, JavaScript',
       role: '100%',
       thumbnail: require('../../images/thumbnail/my-mate.gif'),
-      link: 'https://kyw624.github.io/my-mate/',
+      link: 'https://github.com/kyw624/my-mate',
     },
     {
       title: 'Portfolio',
       subtitle: '포트폴리오 웹 페이지 (React)',
       description:
         '리액트를 사용해 Mac OS UI를 컨셉으로 제작한 개인 포트폴리오 웹 페이지입니다.',
-      period: '2020-09-14 ~',
+      period: '2020-09-14 ~ 2020-10-04',
       skill: 'React',
       role: '100%',
-      thumbnail: '',
-      link: '',
+      thumbnail: require('../../images/thumbnail/portfolio.gif'),
+      link: 'https://github.com/kyw624/portfolio',
     },
   ];
 
