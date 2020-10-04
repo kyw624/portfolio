@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import BoxFade from '../BoxFade';
 
@@ -73,13 +73,9 @@ const ProjectImage = styled.img`
 `;
 
 function ProjectContents(props) {
-  const fadeRef = useRef();
-
-  void fadeRef.offsetWidth;
-
   return (
     <>
-      <ProjectDescription color={props.color} ref={fadeRef}>
+      <ProjectDescription color={props.color}>
         <ProjectTitle color={props.color}>
           <h2>{props.items.title}</h2>
           <div>{props.items.subtitle}</div>
@@ -98,11 +94,7 @@ function ProjectContents(props) {
           Link
         </ProjectLink>
       </ProjectDescription>
-      <ProjectImage
-        color={props.color}
-        ref={fadeRef}
-        src={props.items.thumbnail}
-      />
+      <ProjectImage color={props.color} src={props.items.thumbnail} />
     </>
   );
 }
