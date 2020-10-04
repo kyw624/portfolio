@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ItemContainer = styled.div`
+  cursor: pointer;
   position: relative;
   width: 10rem;
   height: 12rem;
