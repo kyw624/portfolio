@@ -1,6 +1,6 @@
 # 리액트 포트폴리오 페이지
 
-리액트를 사용해 Mac OS UI를 컨셉으로 제작한 개인 포트폴리오 페이지입니다.
+리액트를 사용해 Mac OS UI를 컨셉으로 제작한 개인 포트폴리오 페이지입니다. [Link](https://kyw624.github.io/portfolio/)
 
 <br />
 
