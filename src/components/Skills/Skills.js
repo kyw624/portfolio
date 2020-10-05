@@ -82,10 +82,10 @@ const SkillsContent = styled.div`
 // `;
 
 function Skills(props) {
-  const SkillItems = [
+  const skillItems = [
     {
       caption: 'Language',
-      items: ['JavaScript', 'TypeScript', 'NodeJS', 'Python'],
+      items: ['JavaScript', 'TypeScript', 'Node.js', 'Python'],
       ability: ['초급', '입문', '입문', '초급'],
     },
     {
@@ -95,7 +95,7 @@ function Skills(props) {
     },
     {
       caption: 'Library',
-      items: ['ReactJS', 'Redux'],
+      items: ['React.js', 'Redux'],
       ability: ['초급', '초급'],
     },
     {
@@ -156,7 +156,7 @@ function Skills(props) {
       {/* <ArrowButton color={props.color}>
         <Icon name="angle double right" onClick={clickArrow} />
       </ArrowButton> */}
-      {renderSkillItem(SkillItems)}
+      {renderSkillItem(skillItems)}
     </SkillsContainer>
   );
 }

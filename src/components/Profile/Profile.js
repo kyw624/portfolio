@@ -129,7 +129,7 @@ function Profile(props) {
   const profileItem = [
     {
       title: 'Skills',
-      content: 'ReactJS / JavaScript / HTML / CSS / Sass / Python / NodeJS',
+      content: 'React.js / JavaScript / HTML / CSS / Sass / Python / Node.js',
     },
     {
       title: `Education`,
