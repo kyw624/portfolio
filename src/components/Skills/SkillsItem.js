@@ -38,6 +38,16 @@ const ItemContainer = styled.div`
     height: 10rem;
     background: white;
   }
+
+  @media only screen and (max-width: 1024px) {
+    width: 8rem;
+    height: 10rem;
+
+    img {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
 `;
 
 const TextBox = styled.div`

@@ -14,6 +14,10 @@ const ProfileContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   padding: 0 2rem 0 6rem;
+
+  @media only screen and (max-width: 1280px) {
+    padding: 2rem 0;
+  }
 `;
 
 const ImageTemplate = styled.div`
@@ -24,6 +28,20 @@ const ImageTemplate = styled.div`
   background: url(${selfImage}) center no-repeat;
   background-size: cover;
   animation: ${BoxFade} 1s forwards;
+  z-index: 2;
+
+  @media only screen and (max-width: 1280px) {
+    position: absolute;
+    right: 12rem;
+    top: 2rem;
+    width: 20rem;
+    height: 20rem;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    width: 15rem;
+    height: 15rem;
+  }
 `;
 
 const ContentTemplate = styled.div`
@@ -34,6 +52,10 @@ const ContentTemplate = styled.div`
   padding: 2rem;
   opacity: 0;
   animation: ${BoxFade} 1s 0.5s forwards;
+
+  @media only screen and (max-width: 1280px) {
+    width: 100%;
+  }
 `;
 
 const ContentTitle = styled.div`
@@ -46,6 +68,16 @@ const ContentTitle = styled.div`
   div {
     opacity: 0.5;
     font-size: 2.4rem;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    h2 {
+      font-size: 2.4rem;
+    }
+
+    div {
+      font-size: 1.8rem;
+    }
   }
 `;
 
@@ -84,6 +116,10 @@ const ContentIntroduction = styled.div`
         margin-left: 0.3rem;
       }
     }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 1.4rem;
   }
 `;
 

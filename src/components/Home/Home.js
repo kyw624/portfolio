@@ -17,6 +17,15 @@ const HomeTitle = styled.div`
   font-weight: 700;
   margin-top: 20rem;
   animation: ${BoxFade} 1s forwards;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 7rem;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    margin-top: 15rem;
+    font-size: 6.2rem;
+  }
 `;
 
 const HomeContent = styled.div`
@@ -25,6 +34,11 @@ const HomeContent = styled.div`
   color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   animation: ${BoxFade} 1s 0.5s forwards;
+
+  @media only screen and (max-width: 1024px) {
+    margin-top: 5rem;
+    font-size: 3.2rem;
+  }
 `;
 
 const TagContainer = styled.div`

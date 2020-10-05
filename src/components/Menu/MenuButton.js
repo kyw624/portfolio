@@ -28,6 +28,16 @@ const StyledButton = styled.button`
     margin: 0;
     font-size: 5rem;
   }
+
+  @media only screen and (max-width: 1024px) {
+    width: 7.5rem;
+    height: 7.5rem;
+    font-size: 1.6rem;
+
+    i {
+      font-size: 2.5rem;
+    }
+  }
 `;
 
 function MenuButton(props) {

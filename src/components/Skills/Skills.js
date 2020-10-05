@@ -7,7 +7,6 @@ import BoxFade from '../BoxFade';
 const SkillsContainer = styled.div`
   margin: 0;
   padding: 1rem 10rem;
-  padding-top: 2rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -16,6 +15,10 @@ const SkillsContainer = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 0;
+  }
 `;
 
 const SkillsWrap = styled.div`
@@ -23,9 +26,14 @@ const SkillsWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   opacity: 0;
   animation: ${BoxFade} 1s ${(props) => props.delay}s forwards;
+  padding: 0.5rem 0;
+
+  @media only screen and (max-width: 1024px) {
+    margin: 0.5rem 0;
+  }
 `;
 
 const SkillsTitle = styled.div`
@@ -34,12 +42,16 @@ const SkillsTitle = styled.div`
   border-bottom: 0.2rem solid ${(props) => props.color};
   padding-bottom: 0.5rem;
   margin-bottom: 0.7rem;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
 `;
 
 const SkillsContent = styled.div`
   display: flex;
   justify-content: center;
-  height: 14rem;
 `;
 
 // const ArrowButton = styled.div`

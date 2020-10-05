@@ -11,6 +11,13 @@ const FooterWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: 1280px) {
+    width: 10rem;
+    height: 100%;
+    right: 0;
+    flex-direction: column;
+  }
 `;
 
 const ProfileTag = styled.div`
@@ -34,6 +41,10 @@ const ProfileTag = styled.div`
 
   &:hover {
     transform: scale(1.1);
+  }
+
+  @media only screen and (max-width: 1280px) {
+    margin: 2rem 0;
   }
 `;
 

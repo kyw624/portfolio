@@ -14,6 +14,12 @@ const MenuContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   border-radius: 2rem 2rem 0 0;
+
+  @media only screen and (max-width: 1024px) {
+    left: calc(50% - 30rem);
+    width: 60rem;
+    height: 10rem;
+  }
 `;
 
 function Menu(props) {

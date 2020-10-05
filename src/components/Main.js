@@ -30,6 +30,14 @@ const MainTemplate = styled.div`
   justify-content: center;
   position: relative;
   margin-top: 8rem;
+
+  @media only screen and (max-width: 1440px) {
+    width: 90%;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    height: 50rem;
+  }
 `;
 
 function Main(props) {

@@ -22,19 +22,19 @@ const ContactTitle = styled.div`
 `;
 
 const ContentBox = styled.div`
-  width: 100%;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  padding: 0 50rem;
+  align-items: center;
+  padding: 0 10rem;
 `;
 
 const ContactWrap = styled.div`
   width: 100%;
-  position: relative;
   display: flex;
-  margin-bottom: 2rem;
+  justify-content: space-between;
+  margin: 1rem 0;
   opacity: 0;
   animation: ${BoxFade} 1s ${(props) => props.delay}s forwards;
 `;
@@ -42,13 +42,12 @@ const ContactWrap = styled.div`
 const ContactCaption = styled.div`
   font-size: 2.2rem;
   font-weight: 600;
+  margin-right: 1rem;
   border-bottom: 1px solid ${(props) => props.color};
 `;
 
 const ContactContent = styled.a`
-  position: absolute;
   font-size: 1.8rem;
-  left: 10rem;
   width: fit-content;
   cursor: pointer;
 

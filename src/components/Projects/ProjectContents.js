@@ -26,6 +26,18 @@ const ProjectTitle = styled.div`
     font-size: 2.4rem;
     opacity: 0.5;
   }
+
+  @media only screen and (max-width: 1024px) {
+    padding-bottom: 1rem;
+
+    h2 {
+      font-size: 2.4rem;
+    }
+
+    div {
+      font-size: 1.6rem;
+    }
+  }
 `;
 
 const ProjectContent = styled.div`
@@ -39,6 +51,20 @@ const ProjectContent = styled.div`
   div {
     margin: 2rem 0;
     font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    margin-top: 1rem;
+
+    p {
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+    }
+
+    div {
+      margin: 1rem 0;
+      font-size: 1.4rem;
+    }
   }
 `;
 
@@ -61,6 +87,12 @@ const ProjectLink = styled.a`
     border: 0.1rem solid white;
     background: ${(props) => props.color};
     color: white;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    height: 4rem;
+    font-size: 2.4rem;
+    line-height: 3.8rem;
   }
 `;
 
