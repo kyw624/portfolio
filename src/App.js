@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import StatusBar from './components/StatusBar/StatusBar';
 import Main from './components/Main';
 import Menu from './components/Menu/Menu';
+import './index.css';
 import bgImage from './images/background.jpg';
 
 const GlobalStyle = createGlobalStyle`
@@ -17,7 +18,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
     font-family: 'Open Sans', sans-serif;
     position: relative;
     margin: 0;
