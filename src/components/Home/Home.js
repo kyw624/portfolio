@@ -14,6 +14,7 @@ const HomeContainer = styled.div`
 
 const HomeTitle = styled.div`
   font-size: 8.2rem;
+  font-weight: 700;
   margin-top: 20rem;
   animation: ${BoxFade} 1s forwards;
 `;

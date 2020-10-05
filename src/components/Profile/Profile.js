@@ -69,10 +69,10 @@ const ContentIntroduction = styled.div`
       align-items: center;
 
       strong {
-        margin: 0.3rem;
+        margin: 0.2rem;
         font-weight: 600;
         line-height: 1.8rem;
-        padding: 0.3rem;
+        padding: 0.2rem;
         border: 0.2rem solid gray;
         border-radius: 0.5rem;
         background: ${(props) => props.color};
