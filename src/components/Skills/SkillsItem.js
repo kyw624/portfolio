@@ -81,7 +81,7 @@ const SkillsItem = (props) => {
   };
   const renderSkills = (arr) => {
     return arr.items.map((item, index) => {
-      const imageName = item.replace(/\s*/g, '').toLowerCase(); // 공백제거 및 소문자
+      const imageName = item.replace(/(\s|\.)*/g, '').toLowerCase(); // 공백, . 제거 및 소문자
       const ability = arr.ability[index];
 
       return (
