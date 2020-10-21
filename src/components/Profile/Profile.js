@@ -145,7 +145,7 @@ function Profile({color}) {
     },
     {
       title: 'Motto',
-      content: '나쁜 코드도 개선의 여지가 있다. / 인생에서 적을 만들지 말자.',
+      content: '항상 즐겁게 개발하자! / 인생에서 적을 만들지 말자!',
     },
   ];
 
