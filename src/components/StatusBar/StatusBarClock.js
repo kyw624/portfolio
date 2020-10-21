@@ -15,14 +15,14 @@ const StyledClock = styled.div`
   margin-left: 0.5rem;
 `;
 
-function StatusBarClock(props) {
-  const DAY = ['일', '월', '화', '수', '목', '금', '토'];
-  setInterval(props.getTime, 1000);
+function StatusBarClock({date, time, getTime}) {
+  const DAY_LIST = ['일', '월', '화', '수', '목', '금', '토'];
+  setInterval(getTime, 1000);
 
   return (
     <ClockContainer>
-      <StyledDate>({DAY[props.date]})</StyledDate>
-      <StyledClock>{props.time}</StyledClock>
+      <StyledDate>({DAY_LIST[date]})</StyledDate>
+      <StyledClock>{time}</StyledClock>
     </ClockContainer>
   );
 }

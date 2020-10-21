@@ -125,7 +125,7 @@ const ContentIntroduction = styled.div`
 
 const ContentWrap = styled.div``;
 
-function Profile(props) {
+function Profile({color}) {
   const profileItem = [
     {
       title: 'Skills',
@@ -154,7 +154,7 @@ function Profile(props) {
       return (
         <ProfileContents
           key={index}
-          color={props.color}
+          color={color}
           title={item.title}
           content={item.content}
         />
@@ -165,13 +165,13 @@ function Profile(props) {
   return (
     <>
       <ProfileContainer>
-        <ImageTemplate color={props.color} />
+        <ImageTemplate color={color} />
         <ContentTemplate>
-          <ContentTitle color={props.color}>
+          <ContentTitle color={color}>
             <h2>DaengKIM | 생각하는 개발자</h2>
             <div>Front-end Web Developer</div>
           </ContentTitle>
-          <ContentIntroduction color={props.color}>
+          <ContentIntroduction color={color}>
             <ul>
               <li>
                 <strong>좋은 코드와 설계</strong>에 대해 고민하는 주니어 웹
@@ -197,7 +197,7 @@ function Profile(props) {
           <ContentWrap>{renderProfileContents(profileItem)}</ContentWrap>
         </ContentTemplate>
       </ProfileContainer>
-      <ProfileFooter color={props.color} />
+      <ProfileFooter color={color} />
     </>
   );
 }

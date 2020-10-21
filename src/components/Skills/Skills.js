@@ -81,7 +81,7 @@ const SkillsContent = styled.div`
 //   }
 // `;
 
-function Skills(props) {
+function Skills({color}) {
   const skillItems = [
     {
       caption: 'Language',
@@ -121,9 +121,9 @@ function Skills(props) {
       delay += 0.25;
       return (
         <SkillsWrap key={index} delay={delay}>
-          <SkillsTitle color={props.color}>{item.caption}</SkillsTitle>
+          <SkillsTitle color={color}>{item.caption}</SkillsTitle>
           <SkillsContent>
-            <SkillsItem item={item} />
+            <SkillsItem index={index} item={item} />
           </SkillsContent>
         </SkillsWrap>
       );

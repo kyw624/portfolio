@@ -82,7 +82,7 @@ const CopyrightContainer = styled.div`
   font-size: 1.4rem;
 `;
 
-function StatusBar(props) {
+function StatusBar({date, time, getTime}) {
   return (
     <>
       <StatusBarContainer>
@@ -94,9 +94,9 @@ function StatusBar(props) {
           Copyright 2020. Youngwoo Kim. All rights reserved.
         </CopyrightContainer>
         <StatusBarClock
-          date={props.date}
-          time={props.time}
-          getTime={props.getTime}
+          date={date}
+          time={time}
+          getTime={getTime}
         />
       </StatusBarContainer>
     </>

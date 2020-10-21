@@ -26,8 +26,8 @@ const StyledTag = styled.div`
   }
 `;
 
-function HomeTag(props) {
-  return <StyledTag delay={props.delay}># {props.text}</StyledTag>;
+function HomeTag({text, delay}) {
+  return <StyledTag delay={delay}># {text}</StyledTag>;
 }
 
 export default HomeTag;

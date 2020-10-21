@@ -40,23 +40,23 @@ const MainTemplate = styled.div`
   }
 `;
 
-function Main(props) {
+function Main({page, color}) {
   const displayPage = (num) => {
     switch (num) {
       case 1:
-        return <Profile color={props.color} />;
+        return <Profile color={color} />;
       case 2:
-        return <Skills color={props.color} />;
+        return <Skills color={color} />;
       case 3:
-        return <Projects color={props.color} />;
+        return <Projects color={color} />;
       case 4:
-        return <Contact color={props.color} />;
+        return <Contact color={color} />;
       default:
-        return <Home color={props.color} />;
+        return <Home />;
     }
   };
   return (
-    <MainTemplate color={props.color}>{displayPage(props.page)}</MainTemplate>
+    <MainTemplate color={color}>{displayPage(page)}</MainTemplate>
   );
 }
 

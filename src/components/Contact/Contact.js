@@ -56,7 +56,7 @@ const ContactContent = styled.a`
   }
 `;
 
-function Contact(props) {
+function Contact({color}) {
   const ContactItems = [
     {
       caption: 'Email.',
@@ -85,8 +85,8 @@ function Contact(props) {
       delay += 0.25;
       return (
         <ContactWrap key={index} delay={delay}>
-          <ContactCaption color={props.color}>{item.caption}</ContactCaption>
-          <ContactContent color={props.color} onClick={copyToClipboard}>
+          <ContactCaption color={color}>{item.caption}</ContactCaption>
+          <ContactContent color={color} onClick={copyToClipboard}>
             {item.content}
           </ContactContent>
         </ContactWrap>
@@ -96,7 +96,7 @@ function Contact(props) {
 
   return (
     <ContactContainer>
-      <ContactTitle color={props.color}>Contact with me.</ContactTitle>
+      <ContactTitle color={color}>Contact with me.</ContactTitle>
       <ContentBox>{renderContact(ContactItems)}</ContentBox>
     </ContactContainer>
   );

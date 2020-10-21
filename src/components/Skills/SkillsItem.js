@@ -61,7 +61,7 @@ const TextBox = styled.div`
   line-height: 2rem;
 `;
 
-const SkillsItem = (props) => {
+const SkillsItem = ({item, index}) => {
   const imageData = {
     javascript: require('../../images/logo/javascript.png'),
     typescript: require('../../images/logo/typescript.png'),
@@ -93,7 +93,7 @@ const SkillsItem = (props) => {
     });
   };
 
-  return <>{renderSkills(props.item, props.index)}</>;
+  return <>{renderSkills(item, index)}</>;
 };
 
 export default SkillsItem;

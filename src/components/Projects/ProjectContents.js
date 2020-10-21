@@ -104,29 +104,29 @@ const ProjectImage = styled.img`
   animation: ${BoxFade} 1s 0.5s forwards;
 `;
 
-function ProjectContents(props) {
+function ProjectContents({color, item}) {
   return (
     <>
-      <ProjectDescription color={props.color}>
-        <ProjectTitle color={props.color}>
-          <h2>{props.items.title}</h2>
-          <div>{props.items.subtitle}</div>
+      <ProjectDescription color={color}>
+        <ProjectTitle color={color}>
+          <h2>{item.title}</h2>
+          <div>{item.subtitle}</div>
         </ProjectTitle>
         <ProjectContent>
-          <p>{props.items.description}</p>
-          <div>개발기간: {props.items.period}</div>
-          <div>사용기술: {props.items.skill}</div>
-          <div>기여도: {props.items.role}</div>
+          <p>{item.description}</p>
+          <div>개발기간: {item.period}</div>
+          <div>사용기술: {item.skill}</div>
+          <div>기여도: {item.role}</div>
         </ProjectContent>
         <ProjectLink
-          color={props.color}
-          href={props.items.link}
+          color={color}
+          href={item.link}
           target="_blank"
         >
           Link
         </ProjectLink>
       </ProjectDescription>
-      <ProjectImage color={props.color} src={props.items.thumbnail} />
+      <ProjectImage color={color} src={item.thumbnail} />
     </>
   );
 }

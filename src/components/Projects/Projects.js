@@ -56,13 +56,13 @@ const PageButton = styled.div`
   }
 `;
 
-function Projects(props) {
+function Projects({color}) {
   const [item, setItem] = useState(0);
 
   const changeProject = useCallback((num) => setItem(num), []);
 
   const displayProject = useCallback((color, project, array) => {
-    return <ProjectContents color={color} items={array[project]} />;
+    return <ProjectContents color={color} item={array[project]} />;
   }, []);
 
   const renderPageButton = (arr) => {
@@ -70,7 +70,7 @@ function Projects(props) {
       return (
         <PageButton
           key={index}
-          color={props.color}
+          color={color}
           onClick={() => {
             changeProject(index);
           }}
@@ -106,10 +106,10 @@ function Projects(props) {
 
   return (
     <ProjectContainer>
-      <ProjectWrap color={props.color}>
-        {displayProject(props.color, item, projectItems)}
+      <ProjectWrap color={color}>
+        {displayProject(color, item, projectItems)}
       </ProjectWrap>
-      <PageContainer color={props.color}>
+      <PageContainer color={color}>
         {renderPageButton(projectItems)}
       </PageContainer>
     </ProjectContainer>

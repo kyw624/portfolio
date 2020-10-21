@@ -22,7 +22,7 @@ const MenuContainer = styled.div`
   }
 `;
 
-function Menu(props) {
+function Menu({showPage, changeColor}) {
   const menuItems = [
     {
       color: 'black',
@@ -55,8 +55,8 @@ function Menu(props) {
     return arr.map((item, index) => {
       return (
         <MenuButton
-          showPage={props.showPage}
-          changeColor={props.changeColor}
+          showPage={showPage}
+          changeColor={changeColor}
           key={index}
           index={index}
           color={item.color}

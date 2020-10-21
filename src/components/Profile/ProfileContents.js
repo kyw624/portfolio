@@ -35,11 +35,11 @@ const StyledContent = styled.div`
   }
 `;
 
-function ProfileContents(props) {
+function ProfileContents({color, title, content}) {
   return (
     <ContentBox>
-      <StyledTitle color={props.color}>{props.title}</StyledTitle>
-      <StyledContent>{props.content}</StyledContent>
+      <StyledTitle color={color}>{title}</StyledTitle>
+      <StyledContent>{content}</StyledContent>
     </ContentBox>
   );
 }

@@ -40,18 +40,18 @@ const StyledButton = styled.button`
   }
 `;
 
-function MenuButton(props) {
+function MenuButton({showPage, changeColor, index, color, text, icon}) {
   return (
     <>
       <StyledButton
         onMouseOver={() => {
-          props.showPage(props.index);
-          props.changeColor(props.color);
+          showPage(index);
+          changeColor(color);
         }}
-        color={props.color}
+        color={color}
       >
-        <Icon name={props.icon} />
-        {props.text}
+        <Icon name={icon} />
+        {text}
       </StyledButton>
     </>
   );
