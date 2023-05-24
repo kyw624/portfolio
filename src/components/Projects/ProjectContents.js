@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import BoxFade from '../BoxFade';
 
@@ -104,7 +104,7 @@ const ProjectImage = styled.img`
   animation: ${BoxFade} 1s 0.5s forwards;
 `;
 
-function ProjectContents({color, item}) {
+function ProjectContents({ color, item }) {
   return (
     <>
       <ProjectDescription color={color}>
@@ -118,11 +118,7 @@ function ProjectContents({color, item}) {
           <div>사용기술: {item.skill}</div>
           <div>기여도: {item.role}</div>
         </ProjectContent>
-        <ProjectLink
-          color={color}
-          href={item.link}
-          target="_blank"
-        >
+        <ProjectLink color={color} href={item.link} target="_blank">
           Link
         </ProjectLink>
       </ProjectDescription>
@@ -131,4 +127,4 @@ function ProjectContents({color, item}) {
   );
 }
 
-export default ProjectContents;
+export default React.memo(ProjectContents);

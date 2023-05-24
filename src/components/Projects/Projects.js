@@ -56,15 +56,13 @@ const PageButton = styled.div`
   }
 `;
 
-function Projects({color}) {
+function Projects({ color }) {
   const [item, setItem] = useState(0);
 
   const changeProject = useCallback((num) => setItem(num), []);
-
   const displayProject = useCallback((color, project, array) => {
     return <ProjectContents color={color} item={array[project]} />;
   }, []);
-
   const renderPageButton = (arr) => {
     return arr.map((item, index) => {
       return (

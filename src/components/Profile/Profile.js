@@ -125,11 +125,11 @@ const ContentIntroduction = styled.div`
 
 const ContentWrap = styled.div``;
 
-function Profile({color}) {
+function Profile({ color }) {
   const profileItem = [
     {
       title: 'Skills',
-      content: 'React.js / JavaScript / HTML / CSS / Sass / Python / Node.js',
+      content: 'HTML / CSS / JavaScript / TypeScript / React.js / Node.js',
     },
     {
       title: `Education`,

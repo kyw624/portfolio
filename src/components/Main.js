@@ -40,7 +40,7 @@ const MainTemplate = styled.div`
   }
 `;
 
-function Main({page, color}) {
+function Main({ page, color }) {
   const displayPage = (num) => {
     switch (num) {
       case 1:
@@ -55,9 +55,7 @@ function Main({page, color}) {
         return <Home />;
     }
   };
-  return (
-    <MainTemplate color={color}>{displayPage(page)}</MainTemplate>
-  );
+  return <MainTemplate color={color}>{displayPage(page)}</MainTemplate>;
 }
 
 export default React.memo(Main);

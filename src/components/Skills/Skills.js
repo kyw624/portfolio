@@ -81,12 +81,12 @@ const SkillsContent = styled.div`
 //   }
 // `;
 
-function Skills({color}) {
+function Skills({ color }) {
   const skillItems = [
     {
       caption: 'Language',
-      items: ['JavaScript', 'TypeScript', 'Node.js', 'Python'],
-      ability: ['초급', '입문', '입문', '초급'],
+      items: ['JavaScript', 'TypeScript', 'Node.js'],
+      ability: ['초급', '입문', '입문'],
     },
     {
       caption: 'Web Design',
